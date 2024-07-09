@@ -5,6 +5,9 @@ function createTodo () {
     const userInput = document.getElementById('note').value;
     listItem.innerHTML = userInput;
     listItem.setAttribute("onclick", "todoCheck(event, this)");
+    listItem.setAttribute("ontouchstart", "todoCheck(event, this)");
+    listItem.setAttribute("ontouchend", "todoCheck(event, this)");
+    listItem.setAttribute("ontouchcancel", "todoCheck(event, this)");
     document.getElementById('note').value = '';
 }
 
