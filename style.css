@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+body {
+    font-family: "Roboto Slab", serif;
+    background-color: #e2ebbe;
+}
+
+h1, p, #container {
+    text-align: center;
+}
+
+li {
+    list-style: square;
+    border-bottom: 1px solid red;
+    height: auto;
+    background-color: #c9d699;
+}
+
+li:hover {
+    background-color: #bac590;
+    padding: 2px;
+    transition: all 1s ease-out;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #bac590;
+    
+}
+
+.lines {
+    line-height: 20px;
+    margin: 0 auto;
+    width: auto;
+}
+
+button {
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    background: linear-gradient(to right, #2abfff, #0071ff);
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+button::after {
+    content: '';
+    background: linear-gradient(to right, #ffee00, #ffb300);
+    height: 100%;
+    width: 0px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 150ms ease-in-out;
+}
+
+button:hover::after {
+    width: 100%;
+}
+
+button:hover {
+    color: black;
+}
